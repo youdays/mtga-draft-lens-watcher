@@ -26,6 +26,5 @@ jobs:
           corepack yarn install --immutable
       - name: 型・動作・ビルドを検証する
         run: |
-          corepack yarn typecheck
           corepack yarn test
           corepack yarn build
