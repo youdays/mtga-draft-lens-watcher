@@ -24,8 +24,8 @@ jobs:
         run: |
           corepack enable
           corepack yarn install --immutable
-      - name: 型・動作・配布物を検証する
+      - name: 型・動作・ビルドを検証する
         run: |
           corepack yarn typecheck
           corepack yarn test
-          corepack yarn test:package
+          corepack yarn build

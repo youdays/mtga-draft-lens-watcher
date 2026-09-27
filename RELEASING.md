@@ -1,56 +1,31 @@
-# リリース手順
+# npmへの公開手順
 
-`@youdays/mtga-draft-lens-watcher`は、CIで検証したmainのコミットから手動でnpmへ公開します。
+CIが成功し、レビューしてマージしたmainから手動で公開します。package.jsonのversionを確認し、2回目以降は未公開のバージョンへ更新してください。
 
-## リリースの準備
+```sh
+corepack yarn install --immutable
+npm pack --dry-run
+npm pack
+```
 
-1. package.jsonのversionを更新し、変更内容をPRに記載します。依存関係を変更した場合はyarn.lockも更新します。
-2. 型検査・テスト・配布物検証を実行し、PRのCIが成功することを確認します。
+`npm pack`時に自動でビルドされます。配布内容はdistのJavaScript、package.json、README、LICENSE、.env.exampleです。実設定や実ログが含まれていないことを確認します。
 
-   ```sh
-   corepack yarn install --immutable
-   corepack yarn typecheck
-   corepack yarn test
-   corepack yarn test:package
-   npm pack --dry-run
-   ```
+初回は生成したtarballをインストールし、ヘルプ表示と実際のログ・Web UIとの連携を確認します。以下は0.1.0の例です。
 
-3. PRをレビューしてmainへマージし、mainのCI成功を確認します。
+```sh
+npm install -g ./youdays-mtga-draft-lens-watcher-0.1.0.tgz
+mtga-draft-lens-watcher --help
+mtga-draft-lens-watcher
+```
 
-## npmへの公開
+確認後はCtrl+Cで停止し、youdaysアカウントでログインして同じtarballを公開します。
 
-1. リリースするmainのコミットを取得し、作業ツリーがクリーンであることを確認します。
-2. npmへログインし、対象パッケージを公開できるアカウントであることを確認します。
+```sh
+npm login --registry=https://registry.npmjs.org
+npm whoami
+npm publish ./youdays-mtga-draft-lens-watcher-0.1.0.tgz --access public --dry-run
+npm publish ./youdays-mtga-draft-lens-watcher-0.1.0.tgz --access public
+npm view @youdays/mtga-draft-lens-watcher version
+```
 
-   ```sh
-   npm login --registry=https://registry.npmjs.org
-   npm whoami
-   ```
-
-3. 固定した依存関係からtarballを作成します。
-
-   ```sh
-   corepack yarn install --immutable
-   npm pack
-   ```
-
-   配布対象はdistのJavaScript、package.json、README、MITのLICENSE、.env.exampleです。実設定、実ログ、ソースマップ、テスト用データが含まれていないことを確認してください。
-4. 生成されたファイル名を指定し、ドライラン後に同じtarballを公開します。次は0.1.0の例です。
-
-   ```sh
-   npm publish ./youdays-mtga-draft-lens-watcher-0.1.0.tgz --access public --dry-run
-   npm publish ./youdays-mtga-draft-lens-watcher-0.1.0.tgz --access public
-   ```
-
-   ドライランは実際の公開成功や公開権限を保証しません。認証・OTPを求められた場合はnpmの案内に従ってください。
-5. 公開バージョンを確認し、クリーンな環境でインストール・起動を確認します。
-
-   ```sh
-   npm view @youdays/mtga-draft-lens-watcher version
-   npm install -g @youdays/mtga-draft-lens-watcher@0.1.0
-   mtga-draft-lens-watcher --version
-   ```
-
-6. 公開したコミットに対応するバージョンタグとGitHub Releaseを作成し、変更内容を記録します。
-
-公開済みバージョンは上書きできません。修正時は新しいバージョンを公開してください。
+ドライランは公開権限や実際の公開成功を保証しません。公開済みのバージョンは上書きできないため、修正時は新しいバージョンを使います。

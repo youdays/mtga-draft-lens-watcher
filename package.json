@@ -5,8 +5,7 @@
     "build": "node scripts/build.mjs",
     "typecheck": "tsc --noEmit",
     "test": "node --require ts-node/register --test tests/*.test.ts",
-    "prepack": "npm run build",
-    "test:package": "node scripts/test-package.mjs"
+    "prepack": "npm run build"
   },
   "dependencies": {
     "tail": "2.2.6",

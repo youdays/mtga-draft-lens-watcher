@@ -12,7 +12,7 @@ macOSでのQuick Draft連携を確認しています。Windows・Linuxの実機�
 
 ## インストール
 
-現在はnpm初回公開の準備中です。公開までは[ソースからの起動手順](https://github.com/youdays/mtga-draft-lens-watcher/blob/main/CONTRIBUTING.md)を利用してください。
+現在はnpm初回公開の準備中です。公開までは下記の「ソースから起動する」を利用してください。
 
 npm公開後は、次のコマンドでインストールできます。
 
@@ -93,9 +93,17 @@ npm install -g @youdays/mtga-draft-lens-watcher@latest
 npm uninstall -g @youdays/mtga-draft-lens-watcher
 ```
 
-## 開発に参加する
+## ソースから起動する
 
-[開発手順](https://github.com/youdays/mtga-draft-lens-watcher/blob/main/CONTRIBUTING.md)と[技術仕様](https://github.com/youdays/mtga-draft-lens-watcher/blob/main/docs/architecture.md)を参照してください。
+```sh
+git clone https://github.com/youdays/mtga-draft-lens-watcher.git
+cd mtga-draft-lens-watcher
+corepack yarn install --immutable
+corepack yarn build
+corepack yarn start
+```
+
+設定ファイルを指定する場合は、最後のコマンドを`corepack yarn start --config "watcher.env"`に置き換えてください。
 
 ## ライセンス
 
