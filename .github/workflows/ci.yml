@@ -18,6 +18,8 @@ jobs:
       - uses: actions/setup-node@v5
         with:
           node-version: ${{ matrix.node }}
+          # Corepack有効化前にグローバルのYarn 1を起動させない。
+          package-manager-cache: false
       - name: 固定した依存関係をインストールする
         run: |
           corepack enable
