@@ -1,0 +1,80 @@
+[
+  {
+    "name": "PremierのP1P1",
+    "line": "[UnityCrossThreadLogger]<== Event_PlayerDraftStart {\"CardsInPack\":[\"123\",456],\"PackNumber\":1,\"PickNumber\":1}",
+    "expected": {
+      "type": "PickNext",
+      "format": "PremierDraft",
+      "packNumber": 1,
+      "pickNumber": 1,
+      "draftPack": [
+        "123",
+        "456"
+      ]
+    }
+  },
+  {
+    "name": "TraditionalのP1P1",
+    "line": "[UnityCrossThreadLogger]<== Event_PlayerDraftStart {\"EventName\":\"TradDraft_TEST\",\"CardsInPack\":[\"123\",\"456\"],\"PackNumber\":1,\"PickNumber\":1}",
+    "expected": {
+      "type": "PickNext",
+      "format": "PremierDraft",
+      "packNumber": 1,
+      "pickNumber": 1,
+      "draftPack": [
+        "123",
+        "456"
+      ]
+    }
+  },
+  {
+    "name": "Premierのパック更新",
+    "line": "[UnityCrossThreadLogger]Draft.Notify {\"SelfPack\":2,\"SelfPick\":3,\"PackCards\":\"123,456\"}",
+    "expected": {
+      "type": "PickNext",
+      "format": "PremierDraft",
+      "packNumber": 2,
+      "pickNumber": 3,
+      "draftPack": [
+        "123",
+        "456"
+      ]
+    }
+  },
+  {
+    "name": "Premierのピック送信",
+    "line": "[UnityCrossThreadLogger]==> Event_PlayerDraftMakePick {\"Pack\":1,\"Pick\":1,\"GrpId\":123}",
+    "expected": {
+      "type": "PickSubmit",
+      "format": "PremierDraft",
+      "packNumber": 1,
+      "pickNumber": 1,
+      "pickCard": "123"
+    }
+  },
+  {
+    "name": "Quickの直接形式P1P1",
+    "line": "[UnityCrossThreadLogger]<== BotDraft_DraftStatus {\"DraftPack\":[\"123\",\"456\"],\"PackNumber\":0,\"PickNumber\":0}",
+    "expected": {
+      "type": "PickNext",
+      "format": "QuickDraft",
+      "packNumber": 1,
+      "pickNumber": 1,
+      "draftPack": [
+        "123",
+        "456"
+      ]
+    }
+  },
+  {
+    "name": "Quickの直接形式ピック送信",
+    "line": "[UnityCrossThreadLogger]==> BotDraft_DraftPick {\"PickInfo\":{\"PackNumber\":1,\"PickNumber\":2,\"CardId\":\"123\"}}",
+    "expected": {
+      "type": "PickSubmit",
+      "format": "QuickDraft",
+      "packNumber": 2,
+      "pickNumber": 3,
+      "pickCard": "123"
+    }
+  }
+]

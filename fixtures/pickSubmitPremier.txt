@@ -1,0 +1,1 @@
+[65378] [UnityCrossThreadLogger]==> Event_PlayerDraftMakePick {"id":"aaaaaaaa-bbbb-cccc-dddd-eeeeeeeeeeee","request":"{\"Type\":620,\"TransId\":\"ffffffff-gggg-hhhh-iiii-jjjjjjjjjjjj\",\"Payload\":\"{\\\"DraftId\\\":\\\"kkkkkkkk-llll-mmmm-nnnn-oooooooooooo\\\",\\\"GrpId\\\":86685,\\\"Pack\\\":1,\\\"Pick\\\":2}\"}"}

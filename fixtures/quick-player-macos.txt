@@ -1,0 +1,168 @@
+[UnityCrossThreadLogger]2026/09/26 20:00:00
+<== BotDraftDraftStatus(anonymous)
+{"CurrentModule":"BotDraft","Payload":"{\"DraftStatus\":\"PickNext\",\"PackNumber\":0,\"PickNumber\":0,\"DraftPack\":[\"103522\",\"103564\",\"103461\",\"103413\",\"103470\",\"103519\",\"103441\",\"103542\",\"103390\",\"103536\",\"103500\",\"103426\",\"103504\",\"103570\"]}"}
+[UnityCrossThreadLogger]==> BotDraftDraftPick {"id":"anonymous","request":"{\"PickInfo\":{\"PackNumber\":0,\"PickNumber\":0,\"CardIds\":[\"103390\"]}}"}
+[UnityCrossThreadLogger]2026/09/26 20:00:00
+<== BotDraftDraftStatus(anonymous)
+{"CurrentModule":"BotDraft","Payload":"{\"DraftStatus\":\"PickNext\",\"PackNumber\":0,\"PickNumber\":1,\"DraftPack\":[\"103501\",\"103405\",\"103457\",\"103522\",\"103377\",\"103479\",\"103490\",\"103542\",\"103442\",\"103416\",\"103395\",\"103523\",\"103570\"]}"}
+[UnityCrossThreadLogger]==> BotDraftDraftPick {"id":"anonymous","request":"{\"PickInfo\":{\"PackNumber\":0,\"PickNumber\":1,\"CardIds\":[\"103395\"]}}"}
+[UnityCrossThreadLogger]2026/09/26 20:00:00
+<== BotDraftDraftStatus(anonymous)
+{"CurrentModule":"BotDraft","Payload":"{\"DraftStatus\":\"PickNext\",\"PackNumber\":0,\"PickNumber\":2,\"DraftPack\":[\"103460\",\"103519\",\"103484\",\"103564\",\"103418\",\"103540\",\"103389\",\"103466\",\"103390\",\"103426\",\"103530\",\"103578\"]}"}
+[UnityCrossThreadLogger]==> BotDraftDraftPick {"id":"anonymous","request":"{\"PickInfo\":{\"PackNumber\":0,\"PickNumber\":2,\"CardIds\":[\"103390\"]}}"}
+[UnityCrossThreadLogger]2026/09/26 20:00:00
+<== BotDraftDraftStatus(anonymous)
+{"CurrentModule":"BotDraft","Payload":"{\"DraftStatus\":\"PickNext\",\"PackNumber\":0,\"PickNumber\":3,\"DraftPack\":[\"103377\",\"103555\",\"103537\",\"103519\",\"103425\",\"103389\",\"103515\",\"103429\",\"103376\",\"103465\",\"103569\"]}"}
+[UnityCrossThreadLogger]==> BotDraftDraftPick {"id":"anonymous","request":"{\"PickInfo\":{\"PackNumber\":0,\"PickNumber\":3,\"CardIds\":[\"103465\"]}}"}
+[UnityCrossThreadLogger]2026/09/26 20:00:00
+<== BotDraftDraftStatus(anonymous)
+{"CurrentModule":"BotDraft","Payload":"{\"DraftStatus\":\"PickNext\",\"PackNumber\":0,\"PickNumber\":4,\"DraftPack\":[\"103381\",\"103520\",\"103396\",\"103537\",\"103497\",\"103411\",\"103487\",\"103370\",\"103546\",\"103581\"]}"}
+[UnityCrossThreadLogger]==> BotDraftDraftPick {"id":"anonymous","request":"{\"PickInfo\":{\"PackNumber\":0,\"PickNumber\":4,\"CardIds\":[\"103546\"]}}"}
+[UnityCrossThreadLogger]2026/09/26 20:00:00
+<== BotDraftDraftStatus(anonymous)
+{"CurrentModule":"BotDraft","Payload":"{\"DraftStatus\":\"PickNext\",\"PackNumber\":0,\"PickNumber\":5,\"DraftPack\":[\"103515\",\"103513\",\"103391\",\"103486\",\"103386\",\"103379\",\"103370\",\"103509\",\"103567\"]}"}
+[UnityCrossThreadLogger]==> BotDraftDraftPick {"id":"anonymous","request":"{\"PickInfo\":{\"PackNumber\":0,\"PickNumber\":5,\"CardIds\":[\"103386\"]}}"}
+[UnityCrossThreadLogger]2026/09/26 20:00:00
+<== BotDraftDraftStatus(anonymous)
+{"CurrentModule":"BotDraft","Payload":"{\"DraftStatus\":\"PickNext\",\"PackNumber\":0,\"PickNumber\":6,\"DraftPack\":[\"103410\",\"103386\",\"103407\",\"103497\",\"103555\",\"103513\",\"103558\",\"103505\"]}"}
+[UnityCrossThreadLogger]==> BotDraftDraftPick {"id":"anonymous","request":"{\"PickInfo\":{\"PackNumber\":0,\"PickNumber\":6,\"CardIds\":[\"103386\"]}}"}
+[UnityCrossThreadLogger]2026/09/26 20:00:00
+<== BotDraftDraftStatus(anonymous)
+{"CurrentModule":"BotDraft","Payload":"{\"DraftStatus\":\"PickNext\",\"PackNumber\":0,\"PickNumber\":7,\"DraftPack\":[\"103564\",\"103399\",\"103533\",\"103389\",\"103376\",\"103430\",\"103579\"]}"}
+[UnityCrossThreadLogger]==> BotDraftDraftPick {"id":"anonymous","request":"{\"PickInfo\":{\"PackNumber\":0,\"PickNumber\":7,\"CardIds\":[\"103389\"]}}"}
+[UnityCrossThreadLogger]2026/09/26 20:00:00
+<== BotDraftDraftStatus(anonymous)
+{"CurrentModule":"BotDraft","Payload":"{\"DraftStatus\":\"PickNext\",\"PackNumber\":0,\"PickNumber\":8,\"DraftPack\":[\"103522\",\"103564\",\"103413\",\"103519\",\"103441\",\"103542\"]}"}
+[UnityCrossThreadLogger]==> BotDraftDraftPick {"id":"anonymous","request":"{\"PickInfo\":{\"PackNumber\":0,\"PickNumber\":8,\"CardIds\":[\"103542\"]}}"}
+[UnityCrossThreadLogger]2026/09/26 20:00:00
+<== BotDraftDraftStatus(anonymous)
+{"CurrentModule":"BotDraft","Payload":"{\"DraftStatus\":\"PickNext\",\"PackNumber\":0,\"PickNumber\":9,\"DraftPack\":[\"103501\",\"103522\",\"103377\",\"103542\",\"103523\"]}"}
+[UnityCrossThreadLogger]==> BotDraftDraftPick {"id":"anonymous","request":"{\"PickInfo\":{\"PackNumber\":0,\"PickNumber\":9,\"CardIds\":[\"103542\"]}}"}
+[UnityCrossThreadLogger]2026/09/26 20:00:00
+<== BotDraftDraftStatus(anonymous)
+{"CurrentModule":"BotDraft","Payload":"{\"DraftStatus\":\"PickNext\",\"PackNumber\":0,\"PickNumber\":10,\"DraftPack\":[\"103519\",\"103540\",\"103389\",\"103578\"]}"}
+[UnityCrossThreadLogger]==> BotDraftDraftPick {"id":"anonymous","request":"{\"PickInfo\":{\"PackNumber\":0,\"PickNumber\":10,\"CardIds\":[\"103540\"]}}"}
+[UnityCrossThreadLogger]2026/09/26 20:00:00
+<== BotDraftDraftStatus(anonymous)
+{"CurrentModule":"BotDraft","Payload":"{\"DraftStatus\":\"PickNext\",\"PackNumber\":0,\"PickNumber\":11,\"DraftPack\":[\"103377\",\"103555\",\"103389\"]}"}
+[UnityCrossThreadLogger]==> BotDraftDraftPick {"id":"anonymous","request":"{\"PickInfo\":{\"PackNumber\":0,\"PickNumber\":11,\"CardIds\":[\"103377\"]}}"}
+[UnityCrossThreadLogger]2026/09/26 20:00:00
+<== BotDraftDraftStatus(anonymous)
+{"CurrentModule":"BotDraft","Payload":"{\"DraftStatus\":\"PickNext\",\"PackNumber\":0,\"PickNumber\":12,\"DraftPack\":[\"103396\",\"103581\"]}"}
+[UnityCrossThreadLogger]==> BotDraftDraftPick {"id":"anonymous","request":"{\"PickInfo\":{\"PackNumber\":0,\"PickNumber\":12,\"CardIds\":[\"103396\"]}}"}
+[UnityCrossThreadLogger]2026/09/26 20:00:00
+<== BotDraftDraftStatus(anonymous)
+{"CurrentModule":"BotDraft","Payload":"{\"DraftStatus\":\"PickNext\",\"PackNumber\":0,\"PickNumber\":13,\"DraftPack\":[\"103391\"]}"}
+[UnityCrossThreadLogger]==> BotDraftDraftPick {"id":"anonymous","request":"{\"PickInfo\":{\"PackNumber\":0,\"PickNumber\":13,\"CardIds\":[\"103391\"]}}"}
+[UnityCrossThreadLogger]2026/09/26 20:00:00
+<== BotDraftDraftStatus(anonymous)
+{"CurrentModule":"BotDraft","Payload":"{\"DraftStatus\":\"PickNext\",\"PackNumber\":1,\"PickNumber\":0,\"DraftPack\":[\"103478\",\"103436\",\"103389\",\"103441\",\"103542\",\"103519\",\"103490\",\"103539\",\"103471\",\"103554\",\"103384\",\"103531\",\"103517\",\"103566\"]}"}
+[UnityCrossThreadLogger]==> BotDraftDraftPick {"id":"anonymous","request":"{\"PickInfo\":{\"PackNumber\":1,\"PickNumber\":0,\"CardIds\":[\"103531\"]}}"}
+[UnityCrossThreadLogger]2026/09/26 20:00:00
+<== BotDraftDraftStatus(anonymous)
+{"CurrentModule":"BotDraft","Payload":"{\"DraftStatus\":\"PickNext\",\"PackNumber\":1,\"PickNumber\":1,\"DraftPack\":[\"103418\",\"103436\",\"103386\",\"103411\",\"103480\",\"103519\",\"103479\",\"103460\",\"103568\",\"103426\",\"103528\",\"103376\",\"103579\"]}"}
+[UnityCrossThreadLogger]==> BotDraftDraftPick {"id":"anonymous","request":"{\"PickInfo\":{\"PackNumber\":1,\"PickNumber\":1,\"CardIds\":[\"103411\"]}}"}
+[UnityCrossThreadLogger]2026/09/26 20:00:00
+<== BotDraftDraftStatus(anonymous)
+{"CurrentModule":"BotDraft","Payload":"{\"DraftStatus\":\"PickNext\",\"PackNumber\":1,\"PickNumber\":2,\"DraftPack\":[\"103378\",\"103457\",\"103479\",\"103377\",\"103484\",\"103508\",\"103425\",\"103564\",\"103387\",\"103476\",\"103429\",\"103582\"]}"}
+[UnityCrossThreadLogger]==> BotDraftDraftPick {"id":"anonymous","request":"{\"PickInfo\":{\"PackNumber\":1,\"PickNumber\":2,\"CardIds\":[\"103425\"]}}"}
+[UnityCrossThreadLogger]2026/09/26 20:00:00
+<== BotDraftDraftStatus(anonymous)
+{"CurrentModule":"BotDraft","Payload":"{\"DraftStatus\":\"PickNext\",\"PackNumber\":1,\"PickNumber\":3,\"DraftPack\":[\"103494\",\"103520\",\"103425\",\"103461\",\"103541\",\"103411\",\"103369\",\"103515\",\"103430\",\"103500\",\"103569\"]}"}
+[UnityCrossThreadLogger]==> BotDraftDraftPick {"id":"anonymous","request":"{\"PickInfo\":{\"PackNumber\":1,\"PickNumber\":3,\"CardIds\":[\"103425\"]}}"}
+[UnityCrossThreadLogger]2026/09/26 20:00:00
+<== BotDraftDraftStatus(anonymous)
+{"CurrentModule":"BotDraft","Payload":"{\"DraftStatus\":\"PickNext\",\"PackNumber\":1,\"PickNumber\":4,\"DraftPack\":[\"103399\",\"103486\",\"103413\",\"103564\",\"103479\",\"103568\",\"103508\",\"103527\",\"103505\",\"103567\"]}"}
+[UnityCrossThreadLogger]==> BotDraftDraftPick {"id":"anonymous","request":"{\"PickInfo\":{\"PackNumber\":1,\"PickNumber\":4,\"CardIds\":[\"103568\"]}}"}
+[UnityCrossThreadLogger]2026/09/26 20:00:00
+<== BotDraftDraftStatus(anonymous)
+{"CurrentModule":"BotDraft","Payload":"{\"DraftStatus\":\"PickNext\",\"PackNumber\":1,\"PickNumber\":5,\"DraftPack\":[\"103418\",\"103564\",\"103542\",\"103522\",\"103369\",\"103388\",\"103457\",\"103525\",\"103566\"]}"}
+[UnityCrossThreadLogger]==> BotDraftDraftPick {"id":"anonymous","request":"{\"PickInfo\":{\"PackNumber\":1,\"PickNumber\":5,\"CardIds\":[\"103525\"]}}"}
+[UnityCrossThreadLogger]2026/09/26 20:00:00
+<== BotDraftDraftStatus(anonymous)
+{"CurrentModule":"BotDraft","Payload":"{\"DraftStatus\":\"PickNext\",\"PackNumber\":1,\"PickNumber\":6,\"DraftPack\":[\"103519\",\"103486\",\"103564\",\"103448\",\"103484\",\"103495\",\"103429\",\"103545\"]}"}
+[UnityCrossThreadLogger]==> BotDraftDraftPick {"id":"anonymous","request":"{\"PickInfo\":{\"PackNumber\":1,\"PickNumber\":6,\"CardIds\":[\"103429\"]}}"}
+[UnityCrossThreadLogger]2026/09/26 20:00:00
+<== BotDraftDraftStatus(anonymous)
+{"CurrentModule":"BotDraft","Payload":"{\"DraftStatus\":\"PickNext\",\"PackNumber\":1,\"PickNumber\":7,\"DraftPack\":[\"103386\",\"103410\",\"103497\",\"103381\",\"103448\",\"103487\",\"103580\"]}"}
+[UnityCrossThreadLogger]==> BotDraftDraftPick {"id":"anonymous","request":"{\"PickInfo\":{\"PackNumber\":1,\"PickNumber\":7,\"CardIds\":[\"103381\"]}}"}
+[UnityCrossThreadLogger]2026/09/26 20:00:00
+<== BotDraftDraftStatus(anonymous)
+{"CurrentModule":"BotDraft","Payload":"{\"DraftStatus\":\"PickNext\",\"PackNumber\":1,\"PickNumber\":8,\"DraftPack\":[\"103478\",\"103389\",\"103542\",\"103519\",\"103490\",\"103554\"]}"}
+[UnityCrossThreadLogger]==> BotDraftDraftPick {"id":"anonymous","request":"{\"PickInfo\":{\"PackNumber\":1,\"PickNumber\":8,\"CardIds\":[\"103542\"]}}"}
+[UnityCrossThreadLogger]2026/09/26 20:00:00
+<== BotDraftDraftStatus(anonymous)
+{"CurrentModule":"BotDraft","Payload":"{\"DraftStatus\":\"PickNext\",\"PackNumber\":1,\"PickNumber\":9,\"DraftPack\":[\"103386\",\"103480\",\"103519\",\"103376\",\"103579\"]}"}
+[UnityCrossThreadLogger]==> BotDraftDraftPick {"id":"anonymous","request":"{\"PickInfo\":{\"PackNumber\":1,\"PickNumber\":9,\"CardIds\":[\"103376\"]}}"}
+[UnityCrossThreadLogger]2026/09/26 20:00:00
+<== BotDraftDraftStatus(anonymous)
+{"CurrentModule":"BotDraft","Payload":"{\"DraftStatus\":\"PickNext\",\"PackNumber\":1,\"PickNumber\":10,\"DraftPack\":[\"103377\",\"103387\",\"103429\",\"103582\"]}"}
+[UnityCrossThreadLogger]==> BotDraftDraftPick {"id":"anonymous","request":"{\"PickInfo\":{\"PackNumber\":1,\"PickNumber\":10,\"CardIds\":[\"103429\"]}}"}
+[UnityCrossThreadLogger]2026/09/26 20:00:00
+<== BotDraftDraftStatus(anonymous)
+{"CurrentModule":"BotDraft","Payload":"{\"DraftStatus\":\"PickNext\",\"PackNumber\":1,\"PickNumber\":11,\"DraftPack\":[\"103520\",\"103369\",\"103430\"]}"}
+[UnityCrossThreadLogger]==> BotDraftDraftPick {"id":"anonymous","request":"{\"PickInfo\":{\"PackNumber\":1,\"PickNumber\":11,\"CardIds\":[\"103369\"]}}"}
+[UnityCrossThreadLogger]2026/09/26 20:00:00
+<== BotDraftDraftStatus(anonymous)
+{"CurrentModule":"BotDraft","Payload":"{\"DraftStatus\":\"PickNext\",\"PackNumber\":1,\"PickNumber\":12,\"DraftPack\":[\"103486\",\"103508\"]}"}
+[UnityCrossThreadLogger]==> BotDraftDraftPick {"id":"anonymous","request":"{\"PickInfo\":{\"PackNumber\":1,\"PickNumber\":12,\"CardIds\":[\"103486\"]}}"}
+[UnityCrossThreadLogger]2026/09/26 20:00:00
+<== BotDraftDraftStatus(anonymous)
+{"CurrentModule":"BotDraft","Payload":"{\"DraftStatus\":\"PickNext\",\"PackNumber\":1,\"PickNumber\":13,\"DraftPack\":[\"103369\"]}"}
+[UnityCrossThreadLogger]==> BotDraftDraftPick {"id":"anonymous","request":"{\"PickInfo\":{\"PackNumber\":1,\"PickNumber\":13,\"CardIds\":[\"103369\"]}}"}
+[UnityCrossThreadLogger]2026/09/26 20:00:00
+<== BotDraftDraftStatus(anonymous)
+{"CurrentModule":"BotDraft","Payload":"{\"DraftStatus\":\"PickNext\",\"PackNumber\":2,\"PickNumber\":0,\"DraftPack\":[\"103401\",\"103448\",\"103413\",\"103533\",\"103555\",\"103399\",\"103486\",\"103432\",\"103478\",\"103528\",\"103409\",\"103521\",\"103383\",\"103572\"]}"}
+[UnityCrossThreadLogger]==> BotDraftDraftPick {"id":"anonymous","request":"{\"PickInfo\":{\"PackNumber\":2,\"PickNumber\":0,\"CardIds\":[\"103383\"]}}"}
+[UnityCrossThreadLogger]2026/09/26 20:00:00
+<== BotDraftDraftStatus(anonymous)
+{"CurrentModule":"BotDraft","Payload":"{\"DraftStatus\":\"PickNext\",\"PackNumber\":2,\"PickNumber\":1,\"DraftPack\":[\"103432\",\"103513\",\"103479\",\"103377\",\"103441\",\"103485\",\"103522\",\"103399\",\"103426\",\"103465\",\"103443\",\"103373\",\"103581\"]}"}
+[UnityCrossThreadLogger]==> BotDraftDraftPick {"id":"anonymous","request":"{\"PickInfo\":{\"PackNumber\":2,\"PickNumber\":1,\"CardIds\":[\"103373\"]}}"}
+[UnityCrossThreadLogger]2026/09/26 20:00:00
+<== BotDraftDraftStatus(anonymous)
+{"CurrentModule":"BotDraft","Payload":"{\"DraftStatus\":\"PickNext\",\"PackNumber\":2,\"PickNumber\":2,\"DraftPack\":[\"103399\",\"103410\",\"103507\",\"103537\",\"103519\",\"103413\",\"103378\",\"103490\",\"103455\",\"103471\",\"103395\",\"103578\"]}"}
+[UnityCrossThreadLogger]==> BotDraftDraftPick {"id":"anonymous","request":"{\"PickInfo\":{\"PackNumber\":2,\"PickNumber\":2,\"CardIds\":[\"103395\"]}}"}
+[UnityCrossThreadLogger]2026/09/26 20:00:00
+<== BotDraftDraftStatus(anonymous)
+{"CurrentModule":"BotDraft","Payload":"{\"DraftStatus\":\"PickNext\",\"PackNumber\":2,\"PickNumber\":3,\"DraftPack\":[\"103541\",\"103568\",\"103432\",\"103555\",\"103455\",\"103399\",\"103494\",\"103448\",\"103508\",\"103376\",\"103582\"]}"}
+[UnityCrossThreadLogger]==> BotDraftDraftPick {"id":"anonymous","request":"{\"PickInfo\":{\"PackNumber\":2,\"PickNumber\":3,\"CardIds\":[\"103555\"]}}"}
+[UnityCrossThreadLogger]2026/09/26 20:00:00
+<== BotDraftDraftStatus(anonymous)
+{"CurrentModule":"BotDraft","Payload":"{\"DraftStatus\":\"PickNext\",\"PackNumber\":2,\"PickNumber\":4,\"DraftPack\":[\"103486\",\"103568\",\"103399\",\"103555\",\"103495\",\"103507\",\"103413\",\"103512\",\"103376\",\"103579\"]}"}
+[UnityCrossThreadLogger]==> BotDraftDraftPick {"id":"anonymous","request":"{\"PickInfo\":{\"PackNumber\":2,\"PickNumber\":4,\"CardIds\":[\"103413\"]}}"}
+[UnityCrossThreadLogger]2026/09/26 20:00:00
+<== BotDraftDraftStatus(anonymous)
+{"CurrentModule":"BotDraft","Payload":"{\"DraftStatus\":\"PickNext\",\"PackNumber\":2,\"PickNumber\":5,\"DraftPack\":[\"103568\",\"103386\",\"103540\",\"103497\",\"103425\",\"103487\",\"103448\",\"103553\",\"103566\"]}"}
+[UnityCrossThreadLogger]==> BotDraftDraftPick {"id":"anonymous","request":"{\"PickInfo\":{\"PackNumber\":2,\"PickNumber\":5,\"CardIds\":[\"103540\"]}}"}
+[UnityCrossThreadLogger]2026/09/26 20:00:00
+<== BotDraftDraftStatus(anonymous)
+{"CurrentModule":"BotDraft","Payload":"{\"DraftStatus\":\"PickNext\",\"PackNumber\":2,\"PickNumber\":6,\"DraftPack\":[\"103396\",\"103507\",\"103490\",\"103386\",\"103418\",\"103520\",\"103527\",\"103578\"]}"}
+[UnityCrossThreadLogger]==> BotDraftDraftPick {"id":"anonymous","request":"{\"PickInfo\":{\"PackNumber\":2,\"PickNumber\":6,\"CardIds\":[\"103418\"]}}"}
+[UnityCrossThreadLogger]2026/09/26 20:00:00
+<== BotDraftDraftStatus(anonymous)
+{"CurrentModule":"BotDraft","Payload":"{\"DraftStatus\":\"PickNext\",\"PackNumber\":2,\"PickNumber\":7,\"DraftPack\":[\"103413\",\"103515\",\"103542\",\"103522\",\"103369\",\"103484\",\"103429\"]}"}
+[UnityCrossThreadLogger]==> BotDraftDraftPick {"id":"anonymous","request":"{\"PickInfo\":{\"PackNumber\":2,\"PickNumber\":7,\"CardIds\":[\"103542\"]}}"}
+[UnityCrossThreadLogger]2026/09/26 20:00:00
+<== BotDraftDraftStatus(anonymous)
+{"CurrentModule":"BotDraft","Payload":"{\"DraftStatus\":\"PickNext\",\"PackNumber\":2,\"PickNumber\":8,\"DraftPack\":[\"103401\",\"103448\",\"103413\",\"103399\",\"103478\",\"103409\"]}"}
+[UnityCrossThreadLogger]==> BotDraftDraftPick {"id":"anonymous","request":"{\"PickInfo\":{\"PackNumber\":2,\"PickNumber\":8,\"CardIds\":[\"103409\"]}}"}
+[UnityCrossThreadLogger]2026/09/26 20:00:00
+<== BotDraftDraftStatus(anonymous)
+{"CurrentModule":"BotDraft","Payload":"{\"DraftStatus\":\"PickNext\",\"PackNumber\":2,\"PickNumber\":9,\"DraftPack\":[\"103513\",\"103377\",\"103399\",\"103426\",\"103581\"]}"}
+[UnityCrossThreadLogger]==> BotDraftDraftPick {"id":"anonymous","request":"{\"PickInfo\":{\"PackNumber\":2,\"PickNumber\":9,\"CardIds\":[\"103377\"]}}"}
+[UnityCrossThreadLogger]2026/09/26 20:00:00
+<== BotDraftDraftStatus(anonymous)
+{"CurrentModule":"BotDraft","Payload":"{\"DraftStatus\":\"PickNext\",\"PackNumber\":2,\"PickNumber\":10,\"DraftPack\":[\"103399\",\"103378\",\"103490\",\"103578\"]}"}
+[UnityCrossThreadLogger]==> BotDraftDraftPick {"id":"anonymous","request":"{\"PickInfo\":{\"PackNumber\":2,\"PickNumber\":10,\"CardIds\":[\"103378\"]}}"}
+[UnityCrossThreadLogger]2026/09/26 20:00:00
+<== BotDraftDraftStatus(anonymous)
+{"CurrentModule":"BotDraft","Payload":"{\"DraftStatus\":\"PickNext\",\"PackNumber\":2,\"PickNumber\":11,\"DraftPack\":[\"103541\",\"103399\",\"103582\"]}"}
+[UnityCrossThreadLogger]==> BotDraftDraftPick {"id":"anonymous","request":"{\"PickInfo\":{\"PackNumber\":2,\"PickNumber\":11,\"CardIds\":[\"103541\"]}}"}
+[UnityCrossThreadLogger]2026/09/26 20:00:00
+<== BotDraftDraftStatus(anonymous)
+{"CurrentModule":"BotDraft","Payload":"{\"DraftStatus\":\"PickNext\",\"PackNumber\":2,\"PickNumber\":12,\"DraftPack\":[\"103486\",\"103579\"]}"}
+[UnityCrossThreadLogger]==> BotDraftDraftPick {"id":"anonymous","request":"{\"PickInfo\":{\"PackNumber\":2,\"PickNumber\":12,\"CardIds\":[\"103486\"]}}"}
+[UnityCrossThreadLogger]2026/09/26 20:00:00
+<== BotDraftDraftStatus(anonymous)
+{"CurrentModule":"BotDraft","Payload":"{\"DraftStatus\":\"PickNext\",\"PackNumber\":2,\"PickNumber\":13,\"DraftPack\":[\"103386\"]}"}
+[UnityCrossThreadLogger]==> BotDraftDraftPick {"id":"anonymous","request":"{\"PickInfo\":{\"PackNumber\":2,\"PickNumber\":13,\"CardIds\":[\"103386\"]}}"}
