@@ -1,0 +1,16 @@
+{
+  "name": "@youdays/mtga-draft-lens-watcher",
+  "version": "0.1.0",
+  "description": "MTGA Draft LensのPlayer.log監視CLI。npm公開準備中。",
+  "main": "dist/index.js",
+  "files": [
+    "dist"
+  ],
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/youdays/mtga-draft-lens-watcher.git"
+  },
+  "keywords": [],
+  "author": "youdays",
+  "license": "MIT"
+}
