@@ -12,9 +12,7 @@ macOSでのQuick Draft連携を確認しています。Windows・Linuxの実機�
 
 ## インストール
 
-現在はnpm初回公開の準備中です。公開までは下記の「ソースから起動する」を利用してください。
-
-npm公開後は、次のコマンドでインストールできます。
+次のコマンドでインストールできます。
 
 ```sh
 npm install -g @youdays/mtga-draft-lens-watcher
@@ -85,8 +83,6 @@ mtga-draft-lens-watcher --version
 解決しない場合は[Issues](https://github.com/youdays/mtga-draft-lens-watcher/issues)へ、OS・Node.jsとwatcherのバージョン・再現手順を添えて報告してください。ログを添付する場合は、アカウント情報やトークンなどを除いてください。
 
 ## 更新・アンインストール
-
-npm公開後は、次のコマンドを利用できます。
 
 ```sh
 npm install -g @youdays/mtga-draft-lens-watcher@latest
