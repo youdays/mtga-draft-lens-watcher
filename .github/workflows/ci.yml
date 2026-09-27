@@ -1,0 +1,30 @@
+name: watcherを検証する
+on:
+  push:
+    branches: [main]
+  pull_request:
+permissions:
+  contents: read
+jobs:
+  test:
+    strategy:
+      fail-fast: false
+      matrix:
+        os: [ubuntu-latest, windows-latest, macos-latest]
+        node: [22, 24]
+    runs-on: ${{ matrix.os }}
+    steps:
+      - uses: actions/checkout@v5
+      - uses: actions/setup-node@v5
+        with:
+          node-version: ${{ matrix.node }}
+          # Corepack有効化前にグローバルのYarn 1を起動させない。
+          package-manager-cache: false
+      - name: 固定した依存関係をインストールする
+        run: |
+          corepack enable
+          corepack yarn install --immutable
+      - name: 型・動作・ビルドを検証する
+        run: |
+          corepack yarn test
+          corepack yarn build

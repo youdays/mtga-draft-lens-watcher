@@ -1,0 +1,1 @@
+[62503] [UnityCrossThreadLogger]Draft.Notify {"draftId":"anonymous-draft","SelfPick":2,"SelfPack":1,"PackCards":"86885,86747,86743,86813,86982,86711,86685,86894,86818,86985,86964,86731,87041"}
