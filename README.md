@@ -27,8 +27,8 @@ npm install -g @youdays/mtga-draft-lens-watcher
    mtga-draft-lens-watcher
    ```
 
-3. [MTGA Draft LensのPick Viewer](https://youdays.github.io/mtga_realtime_metrics_public/#/pickViewer)を同じPCで開きます。Chromeがローカルネットワークへのアクセス許可を求めた場合は許可してください。
-4. Web UIの接続状態が「接続済み」になったことを確認し、ドラフトを開始します。
+3. [MTGA Draft LensのPick Viewer](https://youdays.github.io/mtga-draft-lens-pages/#/pickViewer)を同じPCで開きます。Chromeがローカルネットワークへのアクセス許可を求めた場合は許可してください。
+4. Web UIに「Live」と表示されたことを確認し、ドラフトを開始します。
 
 終了するときは、ターミナルでCtrl+Cを押します。
 
@@ -71,7 +71,7 @@ watcherは`ws://127.0.0.1:5500`で待ち受けます。既定の接続元に加�
 - **ログが見つからない**：MTG Arenaを起動して詳細ログが有効か確認し、必要に応じて`PLAYER_LOG_PATH`を指定してください。
 - **Web UIにつながらない**：watcherとブラウザが同じPCで動いているか、Chromeのローカルネットワークアクセスが許可されているか確認してください。
 - **5500番ポートが使用中**：すでに起動しているwatcherなどを停止してから再実行してください。
-- **接続済みなのにカードが出ない**：次のパック更新を待ってください。ログの削除・上書きによって、未読のイベントを取得できない場合もあります。
+- **「Live」なのにカードが出ない**：次のパック更新を待ってください。ログの削除・上書きによって、未読のイベントを取得できない場合もあります。
 
 使い方とバージョンは次のコマンドで確認できます。
 
