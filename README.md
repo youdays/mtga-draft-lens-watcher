@@ -2,6 +2,10 @@
 
 MTG Arenaのドラフトを、MTGA Draft LensのWeb UIと連携するためのローカルツールです。`Player.log`を読み取り、現在のパックとピックしたカードを同じPC上のWeb UIへ送ります。
 
+このブランチはwatcher v2（#83）の実装です。WebSocketは `draftState` / `schemaVersion: 1` の全量配信へ変更しています。v2対応のPagesと組み合わせて利用し、公開・マージ時期はRelease Strategyに従ってください。
+
+Architecture・Contract・検証結果は [watcher v2](docs/watcher-v2.md) を参照してください。
+
 ## 動作環境
 
 - Node.js 22.11.0以上

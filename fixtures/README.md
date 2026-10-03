@@ -7,3 +7,10 @@
 - `player-events.json`: [Arenaログ形式の参考資料](https://github.com/kkunde/skills/blob/main/skills/mtga-draft-helper/references/arena-log-parsing.md) のイベント候補をもとに作成した合成fixtureです。新たな実機採取データではありません。Quickの番号は参考資料の例を採用せず、既存fixtureと同じ0始まりにしています。JSONの直接形式とエンベロープ形式で番号の意味を変えません。
 
 `quick-player-macos.txt` と `quick-player-macos.expected.json` は2026-09-26のmacOS実ログから抽出したQuick Draftのパック更新42件・ピック送信42件です。イベント以外の行を除き、JSONは解析に必要なフィールドだけを許可リストで残しています。IDは匿名値に置換し、資産・アカウント情報やピック済みカード・スタイル情報は保存しません。`BotDraftDraftStatus` / `BotDraftDraftPick`、単一選択の `CardIds` 配列、Pack/Pickの0始まりを確認しました。期待値は抽出時に実ログのフィールドから作成し、パーサーの結果とは独立に照合します。Premier/Traditionalの現行実ログとの照合は未実施です。Traditionalのパックは既存UIとの互換性のためPremierDraftとして通知します。複数枚同時ピック（GrpIds）は解析対象外です。
+
+## watcher v2
+
+- `v2-quick.txt`: `quick-player-macos.txt` の最初のPack・Pick・次Packの7行だけを抽出した実ログ由来fixture。番号は元から0-based。累積 `PickedCards` は既存実ログfixtureに残っていないため、別の合成テストで検証する。
+- `v2-premier.txt`: #83で実ログ確認済みとされる `Draft.Notify` / `EventPlayerDraftMakePick` (`DraftId`, `GrpIds`, `Pack`, `Pick`) を使った最小の合成fixture。ドラフトID・CourseIdは匿名値。現行Premier実ログそのものの採取・抽出ではない。旧PremierのRPC形式は既存fixtureでも引き続き検証する。
+
+v2 Adapterは複数枚Pickを配列のまま正規化する。旧Parserの単一Pick APIとfixtureは基盤のRegression確認用に維持する。
