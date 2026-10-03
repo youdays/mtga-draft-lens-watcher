@@ -1,0 +1,4 @@
+[UnityCrossThreadLogger]Draft.Notify {"draftId":"draft-anonymous","SelfPack":1,"SelfPick":1,"PackCards":"86685,86719"}
+[UnityCrossThreadLogger]==> EventPlayerDraftMakePick {"request":"{\"DraftId\":\"draft-anonymous\",\"GrpIds\":[86685],\"Pack\":1,\"Pick\":1}"}
+[UnityCrossThreadLogger]Draft.Notify {"draftId":"draft-anonymous","SelfPack":1,"SelfPick":2,"PackCards":"86719"}
+DraftCompleteDraft {"CourseId":"course-anonymous"}

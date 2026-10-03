@@ -1,10 +1,11 @@
+import { PlayerLogAdapter } from "./adapters/PlayerLogAdapter";
 import { statSync, Stats } from "fs";
 import { EventEmitter } from "events";
 import { Tail } from "tail";
 import { ParsedEvent, PlayerLogParser } from "./util/parseLog";
 import { validatePlayerLogPath } from "./util/getPaths";
 
-export const WatcherEvent = { ...ParsedEvent, Error: "watchError", Reset: "logReset" } as const;
+export const WatcherEvent = { ...ParsedEvent, Error: "watchError", Reset: "logReset", DraftEvent: "draftEvent" } as const;
 const POLL_INTERVAL_MS = 100;
 
 // tail 2.2.6の公開型にない監視コールバックだけを補う。オフセットと読み取り処理には触れない。
@@ -50,6 +51,7 @@ export class MtgaLogWatcher extends EventEmitter {
   private startTail(fromBeginning: boolean): void {
     const initialStats = statSync(this.logPath);
     const parser = new PlayerLogParser();
+    const adapter = new PlayerLogAdapter();
     const tailer = new PlayerLogTail(this.logPath, {
       fromBeginning,
       useWatchFile: true,
@@ -65,6 +67,11 @@ export class MtgaLogWatcher extends EventEmitter {
       this.resume();
     };
     tailer.on("line", (line: string) => {
+      if (this.tailer !== tailer) return;
+      for (const event of adapter.parse(line)) {
+        if (this.tailer !== tailer) return;
+        this.emit(WatcherEvent.DraftEvent, event);
+      }
       if (this.tailer !== tailer) return;
       const parsed = parser.parse(line);
       if (parsed.type !== ParsedEvent.Unknown) this.emit(parsed.type, parsed);

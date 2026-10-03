@@ -6,7 +6,21 @@ import { tmpdir } from "node:os";
 import { resolve, join } from "node:path";
 import { WebSocket } from "ws";
 
-test("WebSocketへ今回受信した履歴とパック・ピックイベントを配信し正常停止する", { timeout: 15000 }, async () => {
+function expectOriginRejected(origin?: string): Promise<void> {
+  return new Promise((resolve, reject) => {
+    const client = new WebSocket("ws://127.0.0.1:5500", origin === undefined ? {} : { origin });
+    client.once("open", () => { client.terminate(); reject(new Error("未許可Originが接続できました")); });
+    client.once("error", reject);
+    client.once("unexpected-response", (_request, response) => {
+      response.resume();
+      try { assert.equal(response.statusCode, 403); resolve(); }
+      catch (error) { reject(error); }
+      finally { client.terminate(); }
+    });
+  });
+}
+
+test("WebSocketへcurrent full DraftStateと再接続時の同じStateを配信し正常停止する", { timeout: 15000 }, async () => {
   const dir = mkdtempSync(join(tmpdir(), "mtga-server-"));
   /** 配信内容をピック番号で識別できる検証用ログ行を生成する。 */
   const line = (n: number) => `Draft.Notify {"SelfPack":1,"SelfPick":${n},"PackCards":"123"}\n`;
@@ -24,7 +38,7 @@ test("WebSocketへ今回受信した履歴とパック・ピックイベント�
     await new Promise<void>((resolve, reject) => {
       const timer = setTimeout(() => reject(new Error(`サーバー検証がタイムアウトしました: ${output}`)), 10000);
       /** 待機タイマーを解除し、検証の成功または失敗を呼び出し元へ返す。 */
-      const finish = (error?: Error) => { clearTimeout(timer); error ? reject(error) : resolve(); };
+      const finish = (error?: Error) => { clearTimeout(timer); if (error) reject(error); else resolve(); };
       child.once("error", finish);
       child.once("exit", code => finish(new Error(`サーバーが終了しました: ${code} ${output}`)));
       child.stderr.on("data", data => { output += data; });
@@ -38,26 +52,28 @@ test("WebSocketへ今回受信した履歴とパック・ピックイベント�
         ws.on("message", raw => {
           try {
             const event = JSON.parse(raw.toString());
-            if (event.type === "EventHistory") {
-              assert.deepEqual(event.payload, []);
+            assert.equal(event.type, "draftState");
+            assert.equal(event.schemaVersion, 1);
+            assert.deepEqual(Object.keys(event).sort(), ["data", "schemaVersion", "type"]);
+            if (event.data.observations.length === 0) {
+              assert.deepEqual(event.data, { draftId: null, eventName: null, currentPickedCardIds: [], observations: [] });
               appendFileSync(join(dir, "Player.log"), line(2));
-            } else if (event.type === "PickNext") {
-              assert.equal(event.payload.pickNumber, 2);
-              assert.deepEqual(event.payload.draftPack, ["123"]);
+            } else if (event.data.observations[0].pickedCardIds === null) {
+              assert.deepEqual(event.data.observations[0], { packNumber: 0, pickNumber: 1, packCardIds: [123], pickedCardIds: null });
               appendFileSync(join(dir, "Player.log"), '[UnityCrossThreadLogger]==> Event_PlayerDraftMakePick {"Pack":1,"Pick":2,"GrpId":123}\n');
             } else {
-              assert.equal(event.type, "PickSubmit");
-              assert.deepEqual(event.payload, { type: "PickSubmit", format: "PremierDraft", packNumber: 1, pickNumber: 2, pickCard: "123" });
+              assert.equal(event.data.observations.length, 1);
+              assert.deepEqual(event.data.currentPickedCardIds, [123]);
+              assert.deepEqual(event.data.observations[0].pickedCardIds, [123]);
               reconnected = new WebSocket("ws://127.0.0.1:5500", { origin: "http://localhost:3000" });
               reconnected.on("error", finish);
-              reconnected.once("message", raw => {
+              reconnected.once("message", async raw => {
                 try {
-                  const history = JSON.parse(raw.toString());
-                  assert.equal(history.type, "EventHistory");
-                  assert.deepEqual(history.payload.map((item: { type: string }) => item.type), ["PickNext", "PickSubmit"]);
-                  assert.equal(history.payload[0].payload.pickNumber, 2);
+                  assert.deepEqual(JSON.parse(raw.toString()), event);
+                  await Promise.all([expectOriginRejected(), expectOriginRejected("https://evil.example"), expectOriginRejected("http://localhost.example.com")]);
                   finish();
-                } catch (error) { finish(error as Error); }
+                }
+                catch (error) { finish(error as Error); }
               });
             }
           } catch (error) { finish(error as Error); }

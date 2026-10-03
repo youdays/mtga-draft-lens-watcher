@@ -1,19 +1,12 @@
-import { ParsedPickNext, ParsedPickSubmit } from "./lib/util/parseLog";
+import { DraftStateReducer } from "./lib/draft/DraftStateReducer";
+import { NormalizedDraftEvent, draftStateEnvelope } from "./lib/draft/types";
 import { WebSocket, WebSocketServer } from "ws";
 import { MtgaLogWatcher, WatcherEvent } from "./lib/MtgaLogWatcher";
 import { getPlayerLogPath } from "./lib/util/getPaths";
 import { getAllowedOrigins, isAllowedOrigin } from "./lib/websocketOrigin";
 
-/** 解析済みピックを、履歴保存とWebSocket配信で共用するイベント形式に変換する。 */
-const createJsonPickEvent = (data: ParsedPickNext | ParsedPickSubmit) => {
-  return {
-    type: data.type,
-    payload: data,
-  };
-};
-
 const logPath = getPlayerLogPath();
-const eventHistory: ReturnType<typeof createJsonPickEvent>[] = [];
+const reducer = new DraftStateReducer();
 
 // Websocketサーバー
 const PORT = 5500;
@@ -38,11 +31,11 @@ const wss = new WebSocketServer({
   console.log(`WebSocketサーバーを起動しました: ws://${HOST}:${PORT}`);
   console.log(`許可した接続元: ${[...allowedOrigins].join(", ")}、http://localhost と http://127.0.0.1（任意のポート）`);
 });
-// 新規接続には収集済みの履歴を送り、UIが現在のピック状態を復元できるようにする。
+// 接続・再接続とも現在のfull DraftStateを送信する。
 wss.on("connection", (ws: WebSocket) => {
   console.log("WebSocketクライアントが接続しました。");
-  // 接続時にいままでの読み込んだイベントを返す
-  ws.send(JSON.stringify({ type: "EventHistory", payload: eventHistory }));
+  // 更新時と同一Envelopeで配信する
+  ws.send(JSON.stringify(draftStateEnvelope(reducer.getState())));
   // クライアントの切断を記録する。
   ws.on("close", () => {
     console.log("WebSocketクライアントが切断しました。");
@@ -51,21 +44,17 @@ wss.on("connection", (ws: WebSocket) => {
 
 // ログ監視
 const watcher = new MtgaLogWatcher(logPath);
-// 受信したピックを履歴へ追加し、接続中のクライアントへ即時配信する。
-const broadcastPick = (data: ParsedPickNext | ParsedPickSubmit) => {
-  console.log("ピックを受信しました:", data);
-
-  const jsonEventPickNext = createJsonPickEvent(data);
-  eventHistory.push(jsonEventPickNext);
-
-  // 切断処理中のクライアントには送信しない。
-  wss.clients.forEach((client) => {
-    if (client.readyState === WebSocket.OPEN) client.send(JSON.stringify(jsonEventPickNext));
-  });
-};
-watcher.on(WatcherEvent.PickNext, broadcastPick);
-watcher.on(WatcherEvent.PickSubmit, broadcastPick);
-watcher.on(WatcherEvent.Reset, () => { eventHistory.length = 0; });
+// 正規化イベントだけをReducerへ渡し、現在の全量Stateを送信する。
+watcher.on(WatcherEvent.DraftEvent, (event: NormalizedDraftEvent) => {
+  const before = JSON.stringify(reducer.getState());
+  const state = reducer.reduce(event);
+  if (before === JSON.stringify(state)) return;
+  const message = JSON.stringify(draftStateEnvelope(state));
+  for (const client of wss.clients) {
+    if (client.readyState === WebSocket.OPEN) client.send(message);
+  }
+});
+// ファイル世代交代はAdapterのみリセット。取得済み事実はDraft境界まで保持する。
 
 /** ログ監視と全クライアント接続を閉じ、サーバーの待ち受けを終了する。 */
 const stop = () => {

@@ -1,0 +1,7 @@
+[UnityCrossThreadLogger]2026/09/26 20:00:00
+<== BotDraftDraftStatus(anonymous)
+{"CurrentModule":"BotDraft","Payload":"{\"DraftStatus\":\"PickNext\",\"PackNumber\":0,\"PickNumber\":0,\"DraftPack\":[\"103522\",\"103564\",\"103461\",\"103413\",\"103470\",\"103519\",\"103441\",\"103542\",\"103390\",\"103536\",\"103500\",\"103426\",\"103504\",\"103570\"]}"}
+[UnityCrossThreadLogger]==> BotDraftDraftPick {"id":"anonymous","request":"{\"PickInfo\":{\"PackNumber\":0,\"PickNumber\":0,\"CardIds\":[\"103390\"]}}"}
+[UnityCrossThreadLogger]2026/09/26 20:00:00
+<== BotDraftDraftStatus(anonymous)
+{"CurrentModule":"BotDraft","Payload":"{\"DraftStatus\":\"PickNext\",\"PackNumber\":0,\"PickNumber\":1,\"DraftPack\":[\"103501\",\"103405\",\"103457\",\"103522\",\"103377\",\"103479\",\"103490\",\"103542\",\"103442\",\"103416\",\"103395\",\"103523\",\"103570\"]}"}

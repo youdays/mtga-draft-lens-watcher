@@ -4,9 +4,10 @@
     "dev": "ts-node src/cli.ts",
     "clean": "node -e \"require('node:fs').rmSync('dist', { recursive: true, force: true })\"",
     "build": "npm run clean && tsc",
-    "typecheck": "tsc --noEmit",
+    "typecheck": "tsc --noEmit -p tsconfig.check.json",
     "test": "node --require ts-node/register --test tests/*.test.ts",
-    "prepack": "npm run build"
+    "prepack": "npm run build",
+    "lint": "eslint src tests"
   },
   "dependencies": {
     "tail": "2.2.6",
@@ -16,8 +17,10 @@
     "@types/node": "^20.11.19",
     "@types/tail": "^2.2.3",
     "@types/ws": "^8.5.10",
+    "eslint": "9.39.1",
     "ts-node": "^10.9.2",
-    "typescript": "^5.3.3"
+    "typescript": "^5.3.3",
+    "typescript-eslint": "8.46.4"
   },
   "volta": {
     "node": "22.11.0",
@@ -25,7 +28,7 @@
   },
   "name": "@youdays/mtga-draft-lens-watcher",
   "version": "0.1.0",
-  "description": "MTG ArenaのPlayer.logを監視し、ローカルのWeb UIへドラフトイベントを配信するCLI",
+  "description": "MTG Arena\u306ePlayer.log\u3092\u76e3\u8996\u3057\u3001\u30ed\u30fc\u30ab\u30eb\u306eWeb UI\u3078\u30c9\u30e9\u30d5\u30c8\u30a4\u30d9\u30f3\u30c8\u3092\u914d\u4fe1\u3059\u308bCLI",
   "bin": "dist/cli.js",
   "files": [
     "dist/",
