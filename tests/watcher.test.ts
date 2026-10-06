@@ -1,3 +1,5 @@
+import { DraftStateReducer } from "../src/lib/draft/DraftStateReducer";
+import { NormalizedDraftEvent } from "../src/lib/draft/types";
 import { test } from "node:test";
 import * as assert from "node:assert/strict";
 import { appendFileSync, mkdtempSync, renameSync, rmSync, writeFileSync } from "node:fs";
@@ -19,6 +21,8 @@ test("起動前の履歴を配信せず、追記・分割行・不正JSON・未�
   const watcher = new MtgaLogWatcher(file);
   const picks: number[] = [];
   const errors: Error[] = [];
+  const normalized: NormalizedDraftEvent[] = [];
+  watcher.on(WatcherEvent.DraftEvent, event => normalized.push(event));
   watcher.on(WatcherEvent.PickNext, data => picks.push(data.pickNumber));
   watcher.on(WatcherEvent.Error, error => errors.push(error));
   try {
@@ -32,11 +36,13 @@ test("起動前の履歴を配信せず、追記・分割行・不正JSON・未�
     writeFileSync(join(dir, "other.log"), line(99));
     await delay(200);
     assert.deepEqual(picks, [1, 2, 3]);
+    assert.deepEqual(normalized.map(e => e.type === "DraftPackObserved" ? e.pickNumber : -1), [0, 1, 2]);
     assert.deepEqual(errors, []);
     watcher.unwatch(); watcher.unwatch();
     appendFileSync(file, line(4));
     await delay(250);
     assert.deepEqual(picks, [1, 2, 3]);
+    assert.equal(normalized.length, 3);
   } finally { watcher.unwatch(); rmSync(dir, { recursive: true, force: true }); }
 });
 
@@ -49,6 +55,8 @@ for (const mode of ["短い内容への切詰め", "空への切詰め", "同サ
     const picks: number[] = [];
     const errors: Error[] = [];
     let resets = 0;
+    const reducer = new DraftStateReducer();
+    watcher.on(WatcherEvent.DraftEvent, event => reducer.reduce(event));
     watcher.on(WatcherEvent.PickNext, data => picks.push(data.pickNumber));
     watcher.on(WatcherEvent.Reset, () => resets++);
     watcher.on(WatcherEvent.Error, error => errors.push(error));
@@ -78,6 +86,7 @@ for (const mode of ["短い内容への切詰め", "空への切詰め", "同サ
       await delay(250);
       assert.deepEqual(picks, [1, 2, 3]);
       assert.equal(resets, 1);
+      assert.deepEqual(reducer.getState().observations.map(o => o.pickNumber), [0, 1, 2]);
       assert.deepEqual(errors, []);
     } finally { watcher.unwatch(); rmSync(dir, { recursive: true, force: true }); }
   });
