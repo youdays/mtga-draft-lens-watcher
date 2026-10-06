@@ -27,7 +27,7 @@
     "yarn": "4.5.1"
   },
   "name": "@youdays/mtga-draft-lens-watcher",
-  "version": "0.2.0-rc.1",
+  "version": "0.2.0",
   "description": "MTG ArenaのPlayer.logを監視し、ローカルのWeb UIへドラフトイベントを配信するCLI",
   "bin": "dist/cli.js",
   "files": [
