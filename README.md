@@ -2,7 +2,7 @@
 
 MTG Arenaのドラフトを、MTGA Draft LensのWeb UIと連携するためのローカルツールです。`Player.log`を読み取り、現在のパックとピックしたカードを同じPC上のWeb UIへ送ります。
 
-このブランチはwatcher v2（#83）の実装です。WebSocketは `draftState` / `schemaVersion: 1` の全量配信へ変更しています。v2対応のPagesと組み合わせて利用し、公開・マージ時期はRelease Strategyに従ってください。
+watcher 0.2系は `draftState` / `schemaVersion: 1` の全量配信を使用します。Pages v2が必要であり、Pages v1ではRecommendationを利用できません。
 
 Architecture・Contract・検証結果は [watcher v2](docs/watcher-v2.md) を参照してください。
 
@@ -12,7 +12,7 @@ Architecture・Contract・検証結果は [watcher v2](docs/watcher-v2.md) を�
 - MTG Arenaの詳細ログを有効にした環境
 - Web UIとwatcherを同じPCで実行
 
-macOSでのQuick Draft連携を確認しています。Windows・Linuxの実機連携とPremier / Traditionalの現行ログとの照合は未確認です。
+macOSのQuick / Premier Draft実ログによる自動検証と、実機でのManual Final Checkを確認済みです。Quickの別Draft開始時のState切替も確認済みです。Windows・Linuxの実機連携とTraditionalの現行ログとの照合は未確認です。
 
 ## インストール
 
@@ -108,3 +108,26 @@ corepack yarn start
 ## ライセンス
 
 [MIT](LICENSE)
+
+## 0.2.0 Release Notes（RC: 0.2.0-rc.1）
+
+- DraftState full-state protocolへ移行し、接続・再接続・観測更新時に `schemaVersion: 1` の全量Stateを配信します。
+- Quick / Premier Draftを同じDraftStateへ正規化します。
+- Pages v2が必要です。Pages v1ではRecommendationを利用できません。旧Pagesとの通信は非互換のため、0.1.0からminor versionを更新します。
+- CLIとJavaScript成果物に加え、TypeScriptの型定義を配布します。型のみの入口からDraftState / PickObservation / NormalizedDraftEventを参照できます。
+
+正式版への更新後はwatcherを再起動してください。
+
+```sh
+npm install -g @youdays/mtga-draft-lens-watcher@latest
+mtga-draft-lens-watcher --version
+mtga-draft-lens-watcher
+```
+
+PremierのPickは現状request時点で観測します。実ログ28/28件のsuccessと次Notifyがsuccess responseより先に到着する例を確認していますが、失敗Pick / retry実ログは未取得です。confirmation correlationの改善はv2.0のBlockingではないFollow-upです。
+
+Rollback時はPagesを安全化済みv1（333e933相当）へ戻し、watcherのlatestを0.1.0へ変更します。**dist-tag変更だけではインストール済みwatcherは戻りません。** 利用者は次の明示install後にwatcherを再起動する必要があります。
+
+```sh
+npm install -g @youdays/mtga-draft-lens-watcher@0.1.0
+```
