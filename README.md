@@ -4,6 +4,8 @@ MTG Arenaのドラフトを、MTGA Draft LensのWeb UIと連携するための�
 
 watcher 0.2系は `draftState` / `schemaVersion: 1` の全量配信を使用します。Pages v2が必要であり、Pages v1ではRecommendationを利用できません。
 
+このブランチでは、Premierのパック提示にイベント名がない場合、参加成功・セット一致の待機画面・新規P1P1が揃った場合だけ補完します。[補完条件と未検証事項](docs/premier-event-name.md)を参照してください。途中起動で参加記録を取り逃した場合は補完せず、Pagesは照合待ちを維持します。この修正はnpm公開版0.2.0にはまだ含まれません。
+
 Architecture・Contract・検証結果は [watcher v2](docs/watcher-v2.md) を参照してください。
 
 ## 動作環境

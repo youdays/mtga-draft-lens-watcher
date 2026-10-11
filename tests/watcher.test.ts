@@ -2,7 +2,7 @@ import { DraftStateReducer } from "../src/lib/draft/DraftStateReducer";
 import { NormalizedDraftEvent } from "../src/lib/draft/types";
 import { test } from "node:test";
 import * as assert from "node:assert/strict";
-import { appendFileSync, mkdtempSync, renameSync, rmSync, writeFileSync } from "node:fs";
+import { appendFileSync, mkdtempSync, readFileSync, renameSync, rmSync, writeFileSync } from "node:fs";
 import { tmpdir } from "node:os";
 import { join } from "node:path";
 import { setTimeout as delay } from "node:timers/promises";
@@ -13,6 +13,29 @@ async function waitFor(check: () => boolean) {
   for (let i = 0; i < 150; i++) { if (check()) return; await delay(20); }
   assert.ok(check(), "監視イベントが期限内に届きませんでした");
 }
+
+test("実監視でも参加名を配信し、ログ置換後の別Draftへ対応を持ち越さない", async () => {
+  const dir = mkdtempSync(join(tmpdir(), "mtga-premier-name-"));
+  const file = join(dir, "Player.log");
+  writeFileSync(file, "");
+  const watcher = new MtgaLogWatcher(file);
+  const events: NormalizedDraftEvent[] = [];
+  const reducer = new DraftStateReducer();
+  watcher.on(WatcherEvent.DraftEvent, event => { events.push(event); reducer.reduce(event); });
+  try {
+    watcher.watch();
+    const start = readFileSync(join(__dirname, "../fixtures/premier-fra-event-name.txt"), "utf8").split("\n").slice(0, 5).join("\n");
+    appendFileSync(file, start + "\n");
+    await waitFor(() => events.length === 1);
+    assert.equal(reducer.getState().eventName, "PremierDraft_FRA_20260929");
+    const replacement = join(dir, "replacement.log");
+    writeFileSync(replacement, 'Draft.Notify {"draftId":"other-draft","SelfPack":1,"SelfPick":1,"PackCards":"106511"}\n');
+    renameSync(replacement, file);
+    await waitFor(() => events.length === 2);
+    assert.equal(reducer.getState().draftId, "other-draft");
+    assert.equal(reducer.getState().eventName, null);
+  } finally { watcher.unwatch(); rmSync(dir, { recursive: true, force: true }); }
+});
 
 test("起動前の履歴を配信せず、追記・分割行・不正JSON・未知イベントを処理して停止する", async () => {
   const dir = mkdtempSync(join(tmpdir(), "mtga-player-"));

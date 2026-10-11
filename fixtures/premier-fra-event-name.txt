@@ -1,0 +1,89 @@
+[UnityCrossThreadLogger]==> EventJoin {"id": "anonymous-request", "request": "{\"EventName\": \"PremierDraft_FRA_20260929\"}"}
+<== EventJoin(anonymous-request)
+{"Course": {"InternalEventName": "PremierDraft_FRA_20260929", "CurrentModule": "PlayerDraft", "ModulePayload": ""}}
+[UnityCrossThreadLogger]Client.SceneChange {"fromSceneName": "EventLanding", "toSceneName": "TableDraftQueue", "context": "Entering table draft queue: FRA_Premier_Draft"}
+[UnityCrossThreadLogger]Draft.Notify {"draftId": "anonymous-draft", "SelfPick": 1, "SelfPack": 1, "PackCards": "106303,106296,106226,106335,106240,106273,106298,106250,106493,106378,106511,106482,106469,106423"}
+[UnityCrossThreadLogger]Client.SceneChange {"fromSceneName": "TableDraftQueue", "toSceneName": "Draft", "context": "HumanDraft"}
+[UnityCrossThreadLogger]==> EventPlayerDraftMakePick {"id": "anonymous-pick", "request": "{\"DraftId\": \"anonymous-draft\", \"GrpIds\": [106378], \"Pack\": 1, \"Pick\": 1}"}
+[UnityCrossThreadLogger]Draft.Notify {"draftId": "anonymous-draft", "SelfPick": 2, "SelfPack": 1, "PackCards": "106263,106226,106303,106280,106311,106355,106241,106233,106409,106372,106447,106520,106427"}
+[UnityCrossThreadLogger]==> EventPlayerDraftMakePick {"id": "anonymous-pick", "request": "{\"DraftId\": \"anonymous-draft\", \"GrpIds\": [106233], \"Pack\": 1, \"Pick\": 2}"}
+[UnityCrossThreadLogger]Draft.Notify {"draftId": "anonymous-draft", "SelfPick": 3, "SelfPack": 1, "PackCards": "106369,106311,106330,106227,106290,106255,106291,106406,106245,106480,106463,106429"}
+[UnityCrossThreadLogger]==> EventPlayerDraftMakePick {"id": "anonymous-pick", "request": "{\"DraftId\": \"anonymous-draft\", \"GrpIds\": [106245], \"Pack\": 1, \"Pick\": 3}"}
+[UnityCrossThreadLogger]Draft.Notify {"draftId": "anonymous-draft", "SelfPick": 4, "SelfPack": 1, "PackCards": "106265,106229,106317,106354,106287,106260,106484,106444,106493,106505,106435"}
+[UnityCrossThreadLogger]==> EventPlayerDraftMakePick {"id": "anonymous-pick", "request": "{\"DraftId\": \"anonymous-draft\", \"GrpIds\": [106444], \"Pack\": 1, \"Pick\": 4}"}
+[UnityCrossThreadLogger]Draft.Notify {"draftId": "anonymous-draft", "SelfPick": 5, "SelfPack": 1, "PackCards": "106407,106349,106272,106331,106226,106379,106494,106442,106482,106437"}
+[UnityCrossThreadLogger]==> EventPlayerDraftMakePick {"id": "anonymous-pick", "request": "{\"DraftId\": \"anonymous-draft\", \"GrpIds\": [106437], \"Pack\": 1, \"Pick\": 5}"}
+[UnityCrossThreadLogger]Draft.Notify {"draftId": "anonymous-draft", "SelfPick": 6, "SelfPack": 1, "PackCards": "106397,106344,106268,106305,106317,106569,106413,106472,106420"}
+[UnityCrossThreadLogger]==> EventPlayerDraftMakePick {"id": "anonymous-pick", "request": "{\"DraftId\": \"anonymous-draft\", \"GrpIds\": [106344], \"Pack\": 1, \"Pick\": 6}"}
+[UnityCrossThreadLogger]Draft.Notify {"draftId": "anonymous-draft", "SelfPick": 7, "SelfPack": 1, "PackCards": "106235,106289,106433,106332,106336,106415,106471,106534"}
+[UnityCrossThreadLogger]==> EventPlayerDraftMakePick {"id": "anonymous-pick", "request": "{\"DraftId\": \"anonymous-draft\", \"GrpIds\": [106332], \"Pack\": 1, \"Pick\": 7}"}
+[UnityCrossThreadLogger]Draft.Notify {"draftId": "anonymous-draft", "SelfPick": 8, "SelfPack": 1, "PackCards": "106399,106296,106355,106327,106371,106343,106439"}
+[UnityCrossThreadLogger]==> EventPlayerDraftMakePick {"id": "anonymous-pick", "request": "{\"DraftId\": \"anonymous-draft\", \"GrpIds\": [106371], \"Pack\": 1, \"Pick\": 8}"}
+[UnityCrossThreadLogger]Draft.Notify {"draftId": "anonymous-draft", "SelfPick": 9, "SelfPack": 1, "PackCards": "106303,106296,106226,106273,106493,106482"}
+[UnityCrossThreadLogger]==> EventPlayerDraftMakePick {"id": "anonymous-pick", "request": "{\"DraftId\": \"anonymous-draft\", \"GrpIds\": [106226], \"Pack\": 1, \"Pick\": 9}"}
+[UnityCrossThreadLogger]Draft.Notify {"draftId": "anonymous-draft", "SelfPick": 10, "SelfPack": 1, "PackCards": "106226,106303,106241,106447,106427"}
+[UnityCrossThreadLogger]==> EventPlayerDraftMakePick {"id": "anonymous-pick", "request": "{\"DraftId\": \"anonymous-draft\", \"GrpIds\": [106241], \"Pack\": 1, \"Pick\": 10}"}
+[UnityCrossThreadLogger]Draft.Notify {"draftId": "anonymous-draft", "SelfPick": 11, "SelfPack": 1, "PackCards": "106311,106291,106406,106429"}
+[UnityCrossThreadLogger]==> EventPlayerDraftMakePick {"id": "anonymous-pick", "request": "{\"DraftId\": \"anonymous-draft\", \"GrpIds\": [106291], \"Pack\": 1, \"Pick\": 11}"}
+[UnityCrossThreadLogger]Draft.Notify {"draftId": "anonymous-draft", "SelfPick": 12, "SelfPack": 1, "PackCards": "106317,106260,106484"}
+[UnityCrossThreadLogger]==> EventPlayerDraftMakePick {"id": "anonymous-pick", "request": "{\"DraftId\": \"anonymous-draft\", \"GrpIds\": [106484], \"Pack\": 1, \"Pick\": 12}"}
+[UnityCrossThreadLogger]Draft.Notify {"draftId": "anonymous-draft", "SelfPick": 13, "SelfPack": 1, "PackCards": "106349,106442"}
+[UnityCrossThreadLogger]==> EventPlayerDraftMakePick {"id": "anonymous-pick", "request": "{\"DraftId\": \"anonymous-draft\", \"GrpIds\": [106349], \"Pack\": 1, \"Pick\": 13}"}
+[UnityCrossThreadLogger]Draft.Notify {"draftId": "anonymous-draft", "SelfPick": 14, "SelfPack": 1, "PackCards": "106305"}
+[UnityCrossThreadLogger]==> EventPlayerDraftMakePick {"id": "anonymous-pick", "request": "{\"DraftId\": \"anonymous-draft\", \"GrpIds\": [106305], \"Pack\": 1, \"Pick\": 14}"}
+[UnityCrossThreadLogger]Draft.Notify {"draftId": "anonymous-draft", "SelfPick": 1, "SelfPack": 2, "PackCards": "106394,106269,106237,106247,106352,106325,106276,106262,106400,106284,106476,106445,106463,106527"}
+[UnityCrossThreadLogger]==> EventPlayerDraftMakePick {"id": "anonymous-pick", "request": "{\"DraftId\": \"anonymous-draft\", \"GrpIds\": [106445], \"Pack\": 2, \"Pick\": 1}"}
+[UnityCrossThreadLogger]Draft.Notify {"draftId": "anonymous-draft", "SelfPick": 2, "SelfPack": 2, "PackCards": "106247,106265,106330,106417,106371,106273,106305,106364,106409,106405,106460,106498,106427"}
+[UnityCrossThreadLogger]==> EventPlayerDraftMakePick {"id": "anonymous-pick", "request": "{\"DraftId\": \"anonymous-draft\", \"GrpIds\": [106247], \"Pack\": 2, \"Pick\": 2}"}
+[UnityCrossThreadLogger]Draft.Notify {"draftId": "anonymous-draft", "SelfPick": 3, "SelfPack": 2, "PackCards": "106299,106311,106269,106331,106418,106229,106400,106412,106447,106281,106494,106533"}
+[UnityCrossThreadLogger]==> EventPlayerDraftMakePick {"id": "anonymous-pick", "request": "{\"DraftId\": \"anonymous-draft\", \"GrpIds\": [106400], \"Pack\": 2, \"Pick\": 3}"}
+[UnityCrossThreadLogger]Draft.Notify {"draftId": "anonymous-draft", "SelfPick": 4, "SelfPack": 2, "PackCards": "106298,106315,106331,106369,106317,106265,106368,106339,106511,106451,106528"}
+[UnityCrossThreadLogger]==> EventPlayerDraftMakePick {"id": "anonymous-pick", "request": "{\"DraftId\": \"anonymous-draft\", \"GrpIds\": [106511], \"Pack\": 2, \"Pick\": 4}"}
+[UnityCrossThreadLogger]Draft.Notify {"draftId": "anonymous-draft", "SelfPick": 5, "SelfPack": 2, "PackCards": "106394,106317,106433,106231,106390,106412,106402,106238,106515,106526"}
+[UnityCrossThreadLogger]==> EventPlayerDraftMakePick {"id": "anonymous-pick", "request": "{\"DraftId\": \"anonymous-draft\", \"GrpIds\": [106238], \"Pack\": 2, \"Pick\": 5}"}
+[UnityCrossThreadLogger]Draft.Notify {"draftId": "anonymous-draft", "SelfPick": 6, "SelfPack": 2, "PackCards": "106338,106407,106240,106417,106268,106470,106486,106450,106531"}
+[UnityCrossThreadLogger]==> EventPlayerDraftMakePick {"id": "anonymous-pick", "request": "{\"DraftId\": \"anonymous-draft\", \"GrpIds\": [106240], \"Pack\": 2, \"Pick\": 6}"}
+[UnityCrossThreadLogger]Draft.Notify {"draftId": "anonymous-draft", "SelfPick": 7, "SelfPack": 2, "PackCards": "106231,106290,106397,106237,106354,106249,106347,106530"}
+[UnityCrossThreadLogger]==> EventPlayerDraftMakePick {"id": "anonymous-pick", "request": "{\"DraftId\": \"anonymous-draft\", \"GrpIds\": [106237], \"Pack\": 2, \"Pick\": 7}"}
+[UnityCrossThreadLogger]Draft.Notify {"draftId": "anonymous-draft", "SelfPick": 8, "SelfPack": 2, "PackCards": "106365,106265,106315,106355,106442,106509,106532"}
+[UnityCrossThreadLogger]==> EventPlayerDraftMakePick {"id": "anonymous-pick", "request": "{\"DraftId\": \"anonymous-draft\", \"GrpIds\": [106365], \"Pack\": 2, \"Pick\": 8}"}
+[UnityCrossThreadLogger]Draft.Notify {"draftId": "anonymous-draft", "SelfPick": 9, "SelfPack": 2, "PackCards": "106394,106237,106262,106400,106284,106527"}
+[UnityCrossThreadLogger]==> EventPlayerDraftMakePick {"id": "anonymous-pick", "request": "{\"DraftId\": \"anonymous-draft\", \"GrpIds\": [106237], \"Pack\": 2, \"Pick\": 9}"}
+[UnityCrossThreadLogger]Draft.Notify {"draftId": "anonymous-draft", "SelfPick": 10, "SelfPack": 2, "PackCards": "106265,106417,106305,106498,106427"}
+[UnityCrossThreadLogger]==> EventPlayerDraftMakePick {"id": "anonymous-pick", "request": "{\"DraftId\": \"anonymous-draft\", \"GrpIds\": [106417], \"Pack\": 2, \"Pick\": 10}"}
+[UnityCrossThreadLogger]Draft.Notify {"draftId": "anonymous-draft", "SelfPick": 11, "SelfPack": 2, "PackCards": "106299,106311,106447,106533"}
+[UnityCrossThreadLogger]==> EventPlayerDraftMakePick {"id": "anonymous-pick", "request": "{\"DraftId\": \"anonymous-draft\", \"GrpIds\": [106447], \"Pack\": 2, \"Pick\": 11}"}
+[UnityCrossThreadLogger]Draft.Notify {"draftId": "anonymous-draft", "SelfPick": 12, "SelfPack": 2, "PackCards": "106315,106331,106528"}
+[UnityCrossThreadLogger]==> EventPlayerDraftMakePick {"id": "anonymous-pick", "request": "{\"DraftId\": \"anonymous-draft\", \"GrpIds\": [106331], \"Pack\": 2, \"Pick\": 12}"}
+[UnityCrossThreadLogger]Draft.Notify {"draftId": "anonymous-draft", "SelfPick": 13, "SelfPack": 2, "PackCards": "106317,106526"}
+[UnityCrossThreadLogger]==> EventPlayerDraftMakePick {"id": "anonymous-pick", "request": "{\"DraftId\": \"anonymous-draft\", \"GrpIds\": [106317], \"Pack\": 2, \"Pick\": 13}"}
+[UnityCrossThreadLogger]Draft.Notify {"draftId": "anonymous-draft", "SelfPick": 14, "SelfPack": 2, "PackCards": "106531"}
+[UnityCrossThreadLogger]==> EventPlayerDraftMakePick {"id": "anonymous-pick", "request": "{\"DraftId\": \"anonymous-draft\", \"GrpIds\": [106531], \"Pack\": 2, \"Pick\": 14}"}
+[UnityCrossThreadLogger]Draft.Notify {"draftId": "anonymous-draft", "SelfPick": 1, "SelfPack": 3, "PackCards": "106299,106241,106350,106358,106263,106376,106306,106418,106391,106384,106515,106502,106470,106532"}
+[UnityCrossThreadLogger]==> EventPlayerDraftMakePick {"id": "anonymous-pick", "request": "{\"DraftId\": \"anonymous-draft\", \"GrpIds\": [106358], \"Pack\": 3, \"Pick\": 1}"}
+[UnityCrossThreadLogger]Draft.Notify {"draftId": "anonymous-draft", "SelfPick": 2, "SelfPack": 3, "PackCards": "106294,106369,106416,106331,106315,106231,106269,106376,106261,106388,106481,106471,106529"}
+[UnityCrossThreadLogger]==> EventPlayerDraftMakePick {"id": "anonymous-pick", "request": "{\"DraftId\": \"anonymous-draft\", \"GrpIds\": [106388], \"Pack\": 3, \"Pick\": 2}"}
+[UnityCrossThreadLogger]Draft.Notify {"draftId": "anonymous-draft", "SelfPick": 3, "SelfPack": 3, "PackCards": "106229,106303,106350,106285,106411,106272,106409,106250,106326,106482,106511,106527"}
+[UnityCrossThreadLogger]==> EventPlayerDraftMakePick {"id": "anonymous-pick", "request": "{\"DraftId\": \"anonymous-draft\", \"GrpIds\": [106229], \"Pack\": 3, \"Pick\": 3}"}
+[UnityCrossThreadLogger]Draft.Notify {"draftId": "anonymous-draft", "SelfPick": 4, "SelfPack": 3, "PackCards": "106329,106237,106265,106349,106371,106418,106400,106521,106436,106480,106422"}
+[UnityCrossThreadLogger]==> EventPlayerDraftMakePick {"id": "anonymous-pick", "request": "{\"DraftId\": \"anonymous-draft\", \"GrpIds\": [106237], \"Pack\": 3, \"Pick\": 4}"}
+[UnityCrossThreadLogger]Draft.Notify {"draftId": "anonymous-draft", "SelfPick": 5, "SelfPack": 3, "PackCards": "106252,106360,106231,106354,106347,106284,106472,106441,106465,106438"}
+[UnityCrossThreadLogger]==> EventPlayerDraftMakePick {"id": "anonymous-pick", "request": "{\"DraftId\": \"anonymous-draft\", \"GrpIds\": [106354], \"Pack\": 3, \"Pick\": 5}"}
+[UnityCrossThreadLogger]Draft.Notify {"draftId": "anonymous-draft", "SelfPick": 6, "SelfPack": 3, "PackCards": "106252,106306,106315,106400,106426,106413,106455,106490,106531"}
+[UnityCrossThreadLogger]==> EventPlayerDraftMakePick {"id": "anonymous-pick", "request": "{\"DraftId\": \"anonymous-draft\", \"GrpIds\": [106400], \"Pack\": 3, \"Pick\": 6}"}
+[UnityCrossThreadLogger]Draft.Notify {"draftId": "anonymous-draft", "SelfPick": 7, "SelfPack": 3, "PackCards": "106247,106418,106299,106265,106305,106262,106412,106420"}
+[UnityCrossThreadLogger]==> EventPlayerDraftMakePick {"id": "anonymous-pick", "request": "{\"DraftId\": \"anonymous-draft\", \"GrpIds\": [106247], \"Pack\": 3, \"Pick\": 7}"}
+[UnityCrossThreadLogger]Draft.Notify {"draftId": "anonymous-draft", "SelfPick": 8, "SelfPack": 3, "PackCards": "106229,106306,106365,106280,106488,106456,106529"}
+[UnityCrossThreadLogger]==> EventPlayerDraftMakePick {"id": "anonymous-pick", "request": "{\"DraftId\": \"anonymous-draft\", \"GrpIds\": [106229], \"Pack\": 3, \"Pick\": 8}"}
+[UnityCrossThreadLogger]Draft.Notify {"draftId": "anonymous-draft", "SelfPick": 9, "SelfPack": 3, "PackCards": "106306,106418,106391,106515,106502,106532"}
+[UnityCrossThreadLogger]==> EventPlayerDraftMakePick {"id": "anonymous-pick", "request": "{\"DraftId\": \"anonymous-draft\", \"GrpIds\": [106502], \"Pack\": 3, \"Pick\": 9}"}
+[UnityCrossThreadLogger]Draft.Notify {"draftId": "anonymous-draft", "SelfPick": 10, "SelfPack": 3, "PackCards": "106294,106416,106331,106315,106529"}
+[UnityCrossThreadLogger]==> EventPlayerDraftMakePick {"id": "anonymous-pick", "request": "{\"DraftId\": \"anonymous-draft\", \"GrpIds\": [106331], \"Pack\": 3, \"Pick\": 10}"}
+[UnityCrossThreadLogger]Draft.Notify {"draftId": "anonymous-draft", "SelfPick": 11, "SelfPack": 3, "PackCards": "106303,106411,106511,106527"}
+[UnityCrossThreadLogger]==> EventPlayerDraftMakePick {"id": "anonymous-pick", "request": "{\"DraftId\": \"anonymous-draft\", \"GrpIds\": [106511], \"Pack\": 3, \"Pick\": 11}"}
+[UnityCrossThreadLogger]Draft.Notify {"draftId": "anonymous-draft", "SelfPick": 12, "SelfPack": 3, "PackCards": "106349,106418,106422"}
+[UnityCrossThreadLogger]==> EventPlayerDraftMakePick {"id": "anonymous-pick", "request": "{\"DraftId\": \"anonymous-draft\", \"GrpIds\": [106349], \"Pack\": 3, \"Pick\": 12}"}
+[UnityCrossThreadLogger]Draft.Notify {"draftId": "anonymous-draft", "SelfPick": 13, "SelfPack": 3, "PackCards": "106360,106231"}
+[UnityCrossThreadLogger]==> EventPlayerDraftMakePick {"id": "anonymous-pick", "request": "{\"DraftId\": \"anonymous-draft\", \"GrpIds\": [106231], \"Pack\": 3, \"Pick\": 13}"}
+[UnityCrossThreadLogger]Draft.Notify {"draftId": "anonymous-draft", "SelfPick": 14, "SelfPack": 3, "PackCards": "106531"}
+[UnityCrossThreadLogger]==> EventPlayerDraftMakePick {"id": "anonymous-pick", "request": "{\"DraftId\": \"anonymous-draft\", \"GrpIds\": [106531], \"Pack\": 3, \"Pick\": 14}"}
