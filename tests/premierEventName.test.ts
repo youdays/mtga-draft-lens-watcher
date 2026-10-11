@@ -4,6 +4,7 @@ import { readFileSync } from "node:fs";
 import { join } from "node:path";
 import { PlayerLogAdapter } from "../src/lib/adapters/PlayerLogAdapter";
 import { DraftStateReducer } from "../src/lib/draft/DraftStateReducer";
+import type { NormalizedDraftEvent } from "../src/lib/draft/types";
 
 const eventName = "PremierDraft_FRA_20260929";
 const request = (name = eventName, id = "request") => `==> EventJoin ${JSON.stringify({ id, request: JSON.stringify({ EventName: name }) })}`;
@@ -20,7 +21,7 @@ const nameOf = (adapter: PlayerLogAdapter, line = pack()) => {
 test("匿名化したFRA実ログの全42提示・42Pickを保ち、最初の提示から形式を確定する", () => {
   const adapter = new PlayerLogAdapter();
   const events = readFileSync(join(__dirname, "../fixtures/premier-fra-event-name.txt"), "utf8").split("\n").flatMap(line => adapter.parse(line));
-  const packs = events.filter(e => e.type === "DraftPackObserved");
+  const packs = events.filter((e): e is Extract<NormalizedDraftEvent, { type: "DraftPackObserved" }> => e.type === "DraftPackObserved");
   assert.equal(packs.length, 42);
   assert.equal(events.filter(e => e.type === "PickObserved").length, 42);
   assert.ok(packs.every(e => e.eventName === eventName));

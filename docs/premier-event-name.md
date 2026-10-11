@@ -28,6 +28,8 @@ FRAの実Arenaログでは、`Draft.Notify`にDraft ID・提示カード・座�
 
 2026-10-12のローカル結果: watcher全51件、typecheck/lint/build成功。Pagesの既存データ・Engine63件とUI210件も再実行して成功。実WebSocket85配信の契約・照合検証成功。初回の通常テストは環境のローカル待受制限（EPERM）でサーバーテスト1件が失敗したため、常用5500番を保護する一時preloadと許可されたローカル待受で全件を再実行した。
 
+CI初回は固定TypeScript 5.3.3でテストのfilter型絞り込みが失敗した。明示的な型述語へ修正し、Yarn 4.5.1のimmutable installでCIと同じ依存関係を取得して全51件・typecheck/lint/buildを再実行し成功した。
+
 ## 手元での確認
 
 この修正は未公開。グローバルにインストール済みの0.2.0にはまだ反映されない。専用checkoutで依存関係を入れ、ソース版をビルドして使う。
